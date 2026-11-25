@@ -1,0 +1,11 @@
+cache/
+out/
+node_modules/
+.env
+broadcast/
+
+.idea
+.vscode
+.DS_STORE
+
+.superpowers/

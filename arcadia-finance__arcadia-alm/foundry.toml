@@ -1,0 +1,97 @@
+[profile.default]
+src = "src"
+out = "out"
+test = "test"
+script = "script"
+libs = ["node_modules"]
+auto_detect_solc = true
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+evm_version = "cancun"
+bytecode_hash = "none"
+cbor_metadata = false
+isolate = false
+fuzz = { runs = 50, max_test_rejects = 65_536 }
+no_match_path = "**/{script/,test/fork/}*"
+fs_permissions = [{ access = "read", path = "./out" }, { access = "write", path = "./script/out" }]
+extra_output = ["storageLayout", "transientStorageLayout"]
+ignored_warnings_from = ["node_modules/"]
+ignored_error_codes = [3860, 4591, 5574]
+remappings = [
+    "@forge-std/=node_modules/forge-std/src/",
+    "@forge-std-v1.13/=node_modules/forge-std-v1.13/src/",
+    "@metadex/=node_modules/metadex/V3/src/",
+    "@metadex-slipstream/=node_modules/metadex-slipstream/contracts/",
+    "@solady/=node_modules/solady/src/",
+    "@uniswap/v4-core/=node_modules/@uniswap/v4-core/",
+    "node_modules/metadex/:V3/=node_modules/metadex/V3/src/",
+    "node_modules/metadex/:@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+    "node_modules/metadex/:@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+    "node_modules/metadex/:@solady/=node_modules/metadex/node_modules/solady/src/",
+    "node_modules/metadex/:@nomad-xyz/src/=node_modules/@nomad-xyz/excessively-safe-call/src/",
+    "node_modules/metadex-slipstream/:contracts/=node_modules/metadex-slipstream/contracts/",
+    "node_modules/metadex-slipstream/:@openzeppelin/contracts/=node_modules/@openzeppelin/contracts-v3.4/",
+    "node_modules/metadex-slipstream/:@nomad-xyz/excessively-safe-call/=node_modules/@nomad-xyz/excessively-safe-call-v0.0.1-rc.1/",
+    "node_modules/metadex-slipstream/:@uniswap/lib/=node_modules/@uniswap/lib/",
+    "node_modules/metadex-slipstream/:base64-sol/=node_modules/base64-sol/",
+    "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+]
+additional_compiler_profiles = [{ name = "vendored", optimizer = true, optimizer_runs = 200 }]
+compilation_restrictions = [
+    { paths = "src/**", version = "=0.8.36" },
+    { paths = "node_modules/metadex/**", min_optimizer_runs = 200 },
+    { paths = "node_modules/metadex-slipstream/contracts/**", version = "=0.7.6", min_optimizer_runs = 200 },
+]
+libraries = [
+    "node_modules/metadex/V3/src/libraries/AllocationLogicLibrary.sol:AllocationLogicLibrary:0x3000000000000000000000000000000000000001",
+    "node_modules/metadex/V3/src/libraries/LeafAllocationLibrary.sol:LeafAllocationLibrary:0x3000000000000000000000000000000000000002",
+    "node_modules/metadex/V3/src/libraries/RewardsLogicLibrary.sol:RewardsLogicLibrary:0x3000000000000000000000000000000000000003",
+    "node_modules/metadex/V3/src/libraries/VotingRewardsFactoryLibrary.sol:VotingRewardsFactoryLibrary:0x3000000000000000000000000000000000000004",
+    "node_modules/metadex-slipstream/contracts/core/libraries/CLPoolNonSwapPath.sol:CLPoolNonSwapPath:0x3000000000000000000000000000000000000005",
+]
+
+[profile.default.invariant]
+runs = 16
+depth = 32
+
+[fmt]
+bracket_spacing = true
+int_types = "long"
+line_length = 120
+number_underscore = "thousands"
+quote_style = "double"
+tab_width = 4
+
+[lint]
+severity = ["high", "med", "low"]
+exclude_lints = ["literal-instead-of-constant"]
+ignore = ["test/CompilePragma7Dot6.sol", "test/utils/mocks/SlipstreamSwapMathMock.sol"]
+
+[profile.ci]
+fuzz = { runs = 200, max_test_rejects = 65_536 }
+
+[profile.ci.invariant]
+runs = 64
+depth = 100
+check_interval = 5
+corpus_dir = "cache/invariant-corpus"
+
+[profile.coverage]
+no_match_path = "{test/fuzz/ALMFactory/CreationGas.fuzz.t.sol,test/gas/*}"
+
+[profile.hf]
+fuzz = { runs = 500, max_test_rejects = 65_536 }
+
+[profile.hf.invariant]
+runs = 128
+depth = 200
+timeout = 150
+corpus_dir = "cache/invariant-corpus"
+show_edge_coverage = true
+
+[profile.solar]
+solc = "solar"
+out = "out/solar"
+cache_path = "cache/solar"
+skip = ["SlipstreamSwapMathMock", "CompilePragma7Dot6", "CompilePragma8Dot36"]

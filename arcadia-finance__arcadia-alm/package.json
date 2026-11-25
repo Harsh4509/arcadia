@@ -1,0 +1,26 @@
+{
+  "name": "arcadia-alm",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Arcadia ALM: Aerodrome Autopilot vaults",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@nomad-xyz/excessively-safe-call-v0.0.1-rc.1": "npm:@nomad-xyz/excessively-safe-call@0.0.1-rc.1",
+    "@openzeppelin/contracts": "5.6.1",
+    "@openzeppelin/contracts-v3.4": "npm:@openzeppelin/contracts@3.4.2-solc-0.7",
+    "@uniswap/lib": "4.0.1-alpha",
+    "@uniswap/v4-core": "^1.0.2",
+    "base64-sol": "1.1.0",
+    "forge-std": "github:foundry-rs/forge-std#v1.16.2",
+    "forge-std-v1.13": "github:foundry-rs/forge-std#v1.13.0",
+    "metadex": "github:dromos-labs/metadex-public#8b506b450aaa9d4a9f1a77e264f2d9dd508e9ddf",
+    "metadex-slipstream": "https://codeload.github.com/dromos-labs/metadex-slipstream-public/tar.gz/f99f2095918cab69eafeffa2c3d0a8762de737b7",
+    "solady": "0.1.26"
+  },
+  "overrides": {
+    "@hyperlane-xyz/core": "file:./stubs/hyperlane-core"
+  }
+}

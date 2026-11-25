@@ -1,0 +1,1332 @@
+[
+  {
+    "id": "scope-manifest",
+    "path": "context/scope.json",
+    "dimensions": [
+      "scope"
+    ],
+    "description": "Repository, revision, and selected-file manifest for the engagement.",
+    "written_for_engagement": true,
+    "level": "engagement",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "context/scope.json",
+        "location": "codebases[0], mode, version"
+      }
+    ]
+  },
+  {
+    "id": "engagement-statements",
+    "path": "context/statements.json",
+    "dimensions": [
+      "tf",
+      "scope",
+      "known"
+    ],
+    "description": "Statement records with identifiers, quotations, source lines, and per-dimension classifications.",
+    "written_for_engagement": true,
+    "level": "engagement",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "context/statements.json",
+        "location": "version; files[].path and files[].statements[]"
+      }
+    ]
+  },
+  {
+    "id": "judging-guidelines",
+    "path": "context/judging-guidelines.md",
+    "dimensions": [
+      "tf",
+      "scope",
+      "known",
+      "severity"
+    ],
+    "description": "Selected Sherlock judging guidelines, duplication rules, platform mechanics, and glossary.",
+    "written_for_engagement": false,
+    "level": "platform",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "context/judging-guidelines.md",
+        "location": "Sections 1–6"
+      }
+    ]
+  },
+  {
+    "id": "severity-set",
+    "path": "context/severity-set.json",
+    "dimensions": [
+      "severity"
+    ],
+    "description": "Ordered severity definitions and identifiers selected for the engagement.",
+    "written_for_engagement": false,
+    "level": "platform",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "context/severity-set.json",
+        "location": "Array elements 0–4, Critical through Info"
+      }
+    ]
+  },
+  {
+    "id": "severity-reference",
+    "path": "context/severities.md",
+    "dimensions": [
+      "severity"
+    ],
+    "description": "Supplied severity reference with definitions, abbreviations, and weights.",
+    "written_for_engagement": false,
+    "level": "platform",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "context/severities.md",
+        "location": "Critical, High, Medium, Low, and Info sections"
+      }
+    ]
+  },
+  {
+    "id": "finding-report-standard",
+    "path": "context/finding-report-standard.md",
+    "dimensions": [],
+    "description": "Platform field-by-field finding-writing guidance and illustrative examples.",
+    "written_for_engagement": false,
+    "level": "platform",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "context/finding-report-standard.md",
+        "location": "Rules for all fields; Field guidance"
+      }
+    ]
+  },
+  {
+    "id": "scope-rule-arcadia-finance__arcadia-alm",
+    "path": "context/scope-rules/arcadia-finance__arcadia-alm.md",
+    "dimensions": [
+      "scope"
+    ],
+    "description": "Sherlock file-list scope rule for arcadia-finance__arcadia-alm.",
+    "written_for_engagement": false,
+    "level": "platform",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "context/scope-rules/arcadia-finance__arcadia-alm.md",
+        "location": "Scope of a file list"
+      }
+    ]
+  },
+  {
+    "id": "arcadia-engagement-context",
+    "path": "context/Arcadia-Context-Doc-Final.md",
+    "dimensions": [
+      "tf",
+      "scope",
+      "known",
+      "severity"
+    ],
+    "description": "Engagement protocol documentation covering architecture, environment, roles, parameter tables, disclosures, and build setup.",
+    "written_for_engagement": true,
+    "level": "engagement",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "context/Arcadia-Context-Doc-Final.md",
+        "location": "lines 3–367; statements S1–S93 in context/statements.json"
+      }
+    ],
+    "provenance": "uploaded"
+  },
+  {
+    "id": "repo-source-02",
+    "path": "arcadia-finance__arcadia-alm/src/core/ALMAdminExtension.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for ALM Admin Extension.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/ALMAdminExtension.sol",
+        "location": "lines 336, 417–418; statements S94, S95 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-03",
+    "path": "arcadia-finance__arcadia-alm/src/core/ALMCore.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for ALM Core.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/ALMCore.sol",
+        "location": "lines 26–31, 129–136, 180–181, 195–204, 313–314, 547–550, 813–816; statements S96, S97, S98, S99, S100, S101, S102 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-04",
+    "path": "arcadia-finance__arcadia-alm/src/core/abstracts/mixins/AsyncVaultGuard.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Async Vault Guard.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/abstracts/mixins/AsyncVaultGuard.sol",
+        "location": "lines 9–14; statements S103 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-05",
+    "path": "arcadia-finance__arcadia-alm/src/core/abstracts/tokens/ERC20Share.sol",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Solidity implementation and comments for ERC-20 Share.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/abstracts/tokens/ERC20Share.sol",
+        "location": "lines 9–13; statements S104 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-06",
+    "path": "arcadia-finance__arcadia-alm/src/core/libraries/logic/CalldataLogic.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Calldata Logic.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/libraries/logic/CalldataLogic.sol",
+        "location": "lines 10–15; statements S105 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-07",
+    "path": "arcadia-finance__arcadia-alm/src/core/libraries/logic/EmissionsLogic.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Emissions Logic.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/libraries/logic/EmissionsLogic.sol",
+        "location": "lines 17–23, 145; statements S106, S107 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-08",
+    "path": "arcadia-finance__arcadia-alm/src/core/libraries/logic/PositionManagerLogic.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Position Manager Logic.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/libraries/logic/PositionManagerLogic.sol",
+        "location": "lines 11–16; statements S108 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-09",
+    "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/PoolTokensLib.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for PoolTokens Library.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/PoolTokensLib.sol",
+        "location": "lines 62; statements S109 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-10",
+    "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/QueueLib.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Queue Library.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/QueueLib.sol",
+        "location": "lines 13–18; statements S110 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-11",
+    "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/RangesLib.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Ranges Library.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/RangesLib.sol",
+        "location": "lines 25–30, 573–574; statements S111, S112 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-12",
+    "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/RewardsLib.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Rewards Library.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/RewardsLib.sol",
+        "location": "lines 18–23, 182, 230, 281–282, 298, 308; statements S113, S114, S115, S116, S117, S118 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-13",
+    "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/ShareLib.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Share Library.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/libraries/state/ShareLib.sol",
+        "location": "lines 10–15; statements S119 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-14",
+    "path": "arcadia-finance__arcadia-alm/src/core/types/PlanCache.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Plan Cache Library.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/core/types/PlanCache.sol",
+        "location": "lines 38–43, 83–84; statements S120, S121 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-15",
+    "path": "arcadia-finance__arcadia-alm/src/factory/ALMFactory.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for ALM Factory.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/factory/ALMFactory.sol",
+        "location": "lines 21–26; statements S122 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-16",
+    "path": "arcadia-finance__arcadia-alm/src/factory/abstracts/base/BaseFactory.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Base Factory.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/factory/abstracts/base/BaseFactory.sol",
+        "location": "lines 17–22; statements S123 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-17",
+    "path": "arcadia-finance__arcadia-alm/src/registry/ALMRegistry.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for ALM Registry.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/registry/ALMRegistry.sol",
+        "location": "lines 10–15; statements S124 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-18",
+    "path": "arcadia-finance__arcadia-alm/src/shared/libraries/math/CLMath.sol",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Solidity implementation and comments for CL Math.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/shared/libraries/math/CLMath.sol",
+        "location": "lines 114, 171–172, 190–191; statements S125, S126, S127 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-19",
+    "path": "arcadia-finance__arcadia-alm/src/shared/libraries/vendored/MetadexOracle.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Metadex Oracle Library.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/shared/libraries/vendored/MetadexOracle.sol",
+        "location": "lines 9–13, 27; statements S128, S129 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-20",
+    "path": "arcadia-finance__arcadia-alm/src/shared/libraries/vendored/MetadexPositionValue.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Metadex Position Value.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/shared/libraries/vendored/MetadexPositionValue.sol",
+        "location": "lines 12–16, 36; statements S130, S131 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-21",
+    "path": "arcadia-finance__arcadia-alm/src/shared/libraries/vendored/MetadexSwapMath.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Metadex Swap Math.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/shared/libraries/vendored/MetadexSwapMath.sol",
+        "location": "lines 10–14; statements S132 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-22",
+    "path": "arcadia-finance__arcadia-alm/src/shared/libraries/vendored/MetadexTickBitmap.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Metadex Tick Bitmap.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/shared/libraries/vendored/MetadexTickBitmap.sol",
+        "location": "lines 11–15; statements S133 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-23",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/ALMSyncExtension.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for ALM Sync Extension.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/ALMSyncExtension.sol",
+        "location": "lines 19–25; statements S134 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-24",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/ALMVaultAsync.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for ALM Vault Async.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/ALMVaultAsync.sol",
+        "location": "lines 17–22; statements S135 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-25",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/ALMVaultSync.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for ALM Vault Sync.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/ALMVaultSync.sol",
+        "location": "lines 23–28, 316–324; statements S136, S137 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-26",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/abstracts/base/BaseVault.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Base Vault.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/abstracts/base/BaseVault.sol",
+        "location": "lines 14–19; statements S138 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-27",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/abstracts/tokens/ERC7540Deposit.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for ERC-7540 Deposit.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/abstracts/tokens/ERC7540Deposit.sol",
+        "location": "lines 9–13; statements S139 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-28",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/DepositOptimizationMath.sol",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Solidity implementation and comments for Deposit Optimization Math.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/DepositOptimizationMath.sol",
+        "location": "lines 379–380; statements S140 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-29",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/EquivalentPositionMath.sol",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Solidity implementation and comments for Equivalent Position Math.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/EquivalentPositionMath.sol",
+        "location": "lines 43–44; statements S141 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-30",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/MintOptimizationMath.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Mint Optimization Math.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/MintOptimizationMath.sol",
+        "location": "lines 15–20; statements S142 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-31",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/QuadraticMath.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for QuadraticMath.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/QuadraticMath.sol",
+        "location": "lines 9; statements S143 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-32",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/RedeemOptimizationMath.sol",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Redeem Optimization Math.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/libraries/math/RedeemOptimizationMath.sol",
+        "location": "lines 14–19, 53; statements S144, S145 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-33",
+    "path": "arcadia-finance__arcadia-alm/src/vaults/types/Snapshot.sol",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Solidity implementation and comments for Snapshot Library.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/src/vaults/types/Snapshot.sol",
+        "location": "lines 34–39, 109; statements S146, S147 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-34",
+    "path": "arcadia-finance__arcadia-alm/docs/audit-doc.md",
+    "dimensions": [
+      "tf",
+      "scope",
+      "known",
+      "severity"
+    ],
+    "description": "Repository protocol documentation covering architecture, environment, roles, parameters, disclosures, and build setup.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/audit-doc.md",
+        "location": "lines 9–358; statements S148–S235 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-35",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMCore/invariantTolerances.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for invariant-test tolerances.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMCore/invariantTolerances.md",
+        "location": "lines 10; statements S236 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-36",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMKeeperExtension/swapSettlement.derivation.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Derivation of keeper-plan settlement accounting, ordering, and value bounds.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMKeeperExtension/swapSettlement.derivation.md",
+        "location": "lines 108, 158; statements S237, S238 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-37",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMVaultSync/deposit.derivation.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Derivation of synchronous deposit quoting, split amounts, refunds, and rounding.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMVaultSync/deposit.derivation.md",
+        "location": "lines 131, 132, 133, 134; statements S239, S240, S241, S242 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-38",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMVaultSync/previews.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for synchronous vault previews.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMVaultSync/previews.md",
+        "location": "lines 7; statements S243 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-39",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMVaultSync/roundingMargins.derivation.md",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Derivation of rounding margins in synchronous vault walks, with proof status and test references.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMVaultSync/roundingMargins.derivation.md",
+        "location": "lines 11, 154, 155, 160, 176, 178; statements S244, S245, S246, S247, S248, S249 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-40",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMVaultSync/uncheckedMath.derivation.md",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Table and derivations of unchecked arithmetic bounds across the source tree.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/ALMVaultSync/uncheckedMath.derivation.md",
+        "location": "lines 48–209; statements S250–S266 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-41",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/CLMath/getAmount0ForLiquidityRoundingUp.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for CLMath token0 liquidity rounding.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/CLMath/getAmount0ForLiquidityRoundingUp.md",
+        "location": "lines 3; statements S267 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-42",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/CLMath/getAmountsForLiquidity.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for CLMath liquidity-to-token amounts.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/CLMath/getAmountsForLiquidity.md",
+        "location": "lines 3; statements S268 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-43",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/CLMath/getBand.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for CLMath price-band arithmetic.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/CLMath/getBand.md",
+        "location": "lines 13; statements S269 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-44",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/CLMath/getNextSqrtPrice.derivation.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Derivation of CLMath next-price arithmetic and subtraction bounds.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/CLMath/getNextSqrtPrice.derivation.md",
+        "location": "lines 13; statements S270 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-45",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/CommandLogic/pausable.md",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Claim table and symbolic evidence for command pause classification.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/CommandLogic/pausable.md",
+        "location": "lines 7; statements S271 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-46",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/DepositOptimizationMath/getBalanceIn.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for deposit input-balance calculations.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/DepositOptimizationMath/getBalanceIn.md",
+        "location": "lines 9; statements S272 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-47",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/DepositOptimizationMath/getQuadraticCoefficients.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for deposit quadratic coefficients.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/DepositOptimizationMath/getQuadraticCoefficients.md",
+        "location": "lines 9; statements S273 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-48",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/DepositOptimizationMath/maxDeposit.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Derivation and proof-status discussion of the maximum-deposit calculation.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/DepositOptimizationMath/maxDeposit.md",
+        "location": "lines 13; statements S274 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-49",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/EmissionsLogic/isPenaltyWindowOpen.md",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Claim table and symbolic evidence for penalty-window queries.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/EmissionsLogic/isPenaltyWindowOpen.md",
+        "location": "lines 8, 9; statements S275, S276 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-50",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/INDEX.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Repository index of proof documents, document kinds, and opening text.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/INDEX.md",
+        "location": "lines 27; statements S277 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-51",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCache/getLevies.derivation.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Derivation of settlement levy rounding and bounds relative to swap cost.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCache/getLevies.derivation.md",
+        "location": "lines 34; statements S278 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-52",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCacheLib/applyLiquidityDelta.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for cached liquidity deltas.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCacheLib/applyLiquidityDelta.md",
+        "location": "lines 7; statements S279 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-53",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCacheLib/getOwed.derivation.md",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Derivation of cached redeem payouts used by keeper amount sentinels.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCacheLib/getOwed.derivation.md",
+        "location": "lines 41; statements S280 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-54",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCacheLib/getSettlementAmountsOut.derivation.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Derivation of deposit and redeem settlement amounts and their rounding.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCacheLib/getSettlementAmountsOut.derivation.md",
+        "location": "lines 64; statements S281 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-55",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCacheLib/getSettlementAmountsOut.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for settlement amount calculations.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/PlanCacheLib/getSettlementAmountsOut.md",
+        "location": "lines 9, 10; statements S282, S283 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-56",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/PoolAxioms.md",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Metadex pool assumptions, source references, arithmetic, types, and caps used in derivations.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/PoolAxioms.md",
+        "location": "lines 7; statements S284 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-57",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/QuadraticMath/getRoot.derivation.md",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Derivation of quadratic-root error bounds, branches, and caller rounding requirements.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/QuadraticMath/getRoot.derivation.md",
+        "location": "lines 117, 178, 194, 200, 210; statements S285, S286, S287, S288, S289 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-58",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/QuadraticMath/getRoot.md",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Claim table and evidence references for quadratic-root arithmetic and callers.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/QuadraticMath/getRoot.md",
+        "location": "lines 20; statements S290 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-59",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/README.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Repository guide to proof statuses, claim tables, and derivations.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/README.md",
+        "location": "lines 30–124; statements S291–S320 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-60",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/RangesLib/donatedLiquidity.derivation.md",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Derivation and analysis of liquidity added to unstaked position NFTs.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/RangesLib/donatedLiquidity.derivation.md",
+        "location": "lines 55, 85; statements S321, S322 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-61",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/RewardsLib/chainStatus.derivation.md",
+    "dimensions": [
+      "tf"
+    ],
+    "description": "Derivation of reward accounting across Metadex chain statuses and accumulator wrapping.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/RewardsLib/chainStatus.derivation.md",
+        "location": "lines 24, 25, 45, 47; statements S323, S324, S325, S326 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-62",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/RewardsLib/getRewardPerShare.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for the reward-per-share accumulator.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/RewardsLib/getRewardPerShare.md",
+        "location": "lines 7; statements S327 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-63",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/ShareLib/getPendingShares.derivation.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Derivation and proof-status discussion of pending-share estimates.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/ShareLib/getPendingShares.derivation.md",
+        "location": "lines 25; statements S328 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-64",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/Snapshot/getAmountsAt.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for snapshot holdings at a price.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/Snapshot/getAmountsAt.md",
+        "location": "lines 9; statements S329 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-65",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/Snapshot/getBurnAmounts.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and evidence references for snapshot burn amounts.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/Snapshot/getBurnAmounts.md",
+        "location": "lines 8; statements S330 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-66",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/Snapshot/getMintShares.md",
+    "dimensions": [
+      "known"
+    ],
+    "description": "Claim table and derivation for snapshot mint-share calculations.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/Snapshot/getMintShares.md",
+        "location": "lines 8; statements S331 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repo-source-67",
+    "path": "arcadia-finance__arcadia-alm/docs/proofs/SwapState/getStepFees.md",
+    "dimensions": [
+      "tf",
+      "known"
+    ],
+    "description": "Claim table and evidence references for simulated swap-step fees and rounding.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/docs/proofs/SwapState/getStepFees.md",
+        "location": "lines 14, 15; statements S332, S333 in context/statements.json"
+      }
+    ]
+  },
+  {
+    "id": "repository-readme",
+    "path": "arcadia-finance__arcadia-alm/README.md",
+    "dimensions": [],
+    "description": "Repository introduction, tool requirements, and setup commands.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/README.md",
+        "location": "Setup"
+      }
+    ]
+  },
+  {
+    "id": "foundry-configuration",
+    "path": "arcadia-finance__arcadia-alm/foundry.toml",
+    "dimensions": [],
+    "description": "Foundry compiler, dependency remapping, test, fuzz, and invariant configuration.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/foundry.toml",
+        "location": "profile.default and additional profiles"
+      }
+    ]
+  },
+  {
+    "id": "dependency-manifest",
+    "path": "arcadia-finance__arcadia-alm/package.json",
+    "dimensions": [],
+    "description": "Node requirement and dependency versions, including pinned Metadex revisions.",
+    "written_for_engagement": false,
+    "level": "repo",
+    "visibility": "participants",
+    "sources": [
+      {
+        "path": "arcadia-finance__arcadia-alm/package.json",
+        "location": "engines, dependencies, overrides"
+      }
+    ]
+  }
+]

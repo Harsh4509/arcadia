@@ -1,0 +1,84 @@
+name: test
+
+on: pull_request
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Format and lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Run format
+        run: forge fmt --check
+
+      - name: Run lint
+        run: forge lint --deny warnings
+
+  test:
+    name: Test (${{ matrix.shard.name }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard:
+          - { name: core B-C, args: "--match-path 'test/fuzz/ALMCore/[B-C]*'" }
+          - { name: core S-T, args: "--match-path 'test/fuzz/ALMCore/[S-T]*'" }
+          - { name: core rest, args: "--match-path 'test/fuzz/ALMCore/[!B-CS-T]*'" }
+          - { name: libraries and view, args: "--match-path 'test/fuzz/{libraries,ALMCoreView}/**'" }
+          - { name: sync vault and gas, args: "--match-path 'test/{fuzz/ALMVaultSync,fuzz/BaseVault,gas}/**'" }
+          - { name: rest, args: "--match-path 'test/**' --no-match-path '{test/fork/**,test/fuzz/ALMCore/**,test/fuzz/libraries/**,test/fuzz/ALMCoreView/**,test/fuzz/ALMVaultSync/**,test/fuzz/BaseVault/**,test/gas/**}'" }
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Restore build
+        id: build
+        uses: actions/cache/restore@v5
+        with:
+          path: |
+            out
+            cache/solidity-files-cache.json
+          key: build-${{ hashFiles('src/**', 'test/**', 'foundry.toml', 'package-lock.json') }}
+          restore-keys: build-
+
+      - name: Run Forge tests
+        run: forge test ${{ matrix.shard.args }} -vvv
+
+      - name: Save build
+        if: ${{ !cancelled() && strategy.job-index == 0 && steps.build.outputs.cache-hit != 'true' }}
+        uses: actions/cache/save@v5
+        with:
+          path: |
+            out
+            cache/solidity-files-cache.json
+          key: ${{ steps.build.outputs.cache-primary-key }}
